@@ -5,7 +5,7 @@ import { ThemedView } from "@/components/ThemedView";
 import { TabBarIcon } from "@/components/navigation/TabBarIcon";
 import React from "react";
 import { useThemeColor } from "@/hooks/useThemeColor";
-import { useAuth } from "@/app/context/AuthContext";
+import { useAuth } from "@/context/AuthContext";
 
 export default function TabTwoScreen() {
   const color = useThemeColor({ light: "#000", dark: "#fff" }, "background");

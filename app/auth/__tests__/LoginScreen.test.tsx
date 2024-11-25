@@ -1,11 +1,11 @@
 import React from "react";
 import { render, fireEvent, waitFor } from "@testing-library/react-native";
-import { useAuth } from "@/app/context/AuthContext";
+import { useAuth } from "@/context/AuthContext";
 import { useLogin } from "@/hooks/useLogin";
 import LoginScreen from "@/screens/LoginScreen";
 
 // Mock hooks
-jest.mock("@/app/context/AuthContext");
+jest.mock("@/context/AuthContext");
 jest.mock("@/hooks/useLogin");
 
 // Mock functions

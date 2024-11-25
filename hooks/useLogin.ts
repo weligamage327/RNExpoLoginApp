@@ -21,9 +21,10 @@ export const useLogin = () => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:3001/authenticate", {
+      const response = await fetch("http://13.201.75.192/api/login", {
         method: "POST",
         headers: {
+          "Accept": "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
@@ -40,11 +41,9 @@ export const useLogin = () => {
         return null;
       }
 
-      const userData = {
-        email: email,
-      };
+      const userData = jsonData.data.user;
 
-      const authKey = jsonData.Token;
+      const authKey = jsonData.data.accessToken;
 
       return { userData, authKey };
     } catch (err) {
