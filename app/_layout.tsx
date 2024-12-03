@@ -51,6 +51,7 @@ export default function RootLayout() {
     return null;
   }
 
+
   return (
     <AuthProvider>
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
